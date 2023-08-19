@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    background: var(--main-color);
+}
+
+button{
+    border: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body{
+    height: 100vh;
+    overflow: scroll;
+}
+
+footer{
+    height: 7.5%;
+    z-index: 9999;
+}
+
+header {
+ height: 15vmin;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+    min-height: 50px;
+    background: var(--main-color);
+}
+main{
+    height: max-content;
+    overflow: hidden;
+}
+menu{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+.menu-ramp{
+    width: 33px;
+    height: 4px;
+    border-radius: 50px;
+    background: #000;
+    margin: 1.7px 0;
+    transition: width .3s ease-in-out;
+    
+}
+menu.active {
+    background-color: var(--main-color);
+}
+menu.active .menu-ramp{
+    width: 0px;
+}
+
+
+aside{
+    position: absolute;
+    width: 0vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 3;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: width .7s ease-in-out, background .12s ease-in-out .0s;
+
+}
+.aside-holder{
+    height: fit-content;
+    height: 100%;
+    width: 0vw;
+    background: black;
+    transition: width .7s ease-in-out;
+}
+aside.active{
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.64);
+    z-index: 10000;
+    transition: background .47s ease-in-out .5s;
+
+}
+aside.active .aside-holder{
+    width: 78vw;
+}
+.surch-block{
+    flex: 5;
+    display: flex;
+    justify-content: flex-end;
+}
+.surch-input{
+    width: 0%;
+    max-width: max-content;
+    box-sizing: border-box;
+    background: #000;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    transition: width 1.2s ease;
+    z-index: 1;
+    color: #fff;
+}
+.surch-input-active{
+    width: 60%;
+    padding-left: 10px;
+}
+.surch-input:focus{
+    outline: none;
+}
+.surch{
+    width: 25px;
+    height: 25px;
+    -webkit-box-shadow: 0 0 0 10px var(--main-color);
+    -moz-box-shadow: 0 0 0 10px var(--main-color);
+    box-shadow: 0 0 0 10px var(--main-color);
+    border-radius: 50%;
+    z-index: 2;
+    background: var(--main-color);
+    margin: 0 10px 0 0;
+}
+.Account{
+    flex: 1;
+    width: 30px;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+.add-new-button-holder,
+.edit-button-holder{
+    width: 40px; 
+    height: 40px; 
+    min-height: 40px;
+    background: var(--content-holder-color); 
+    position: absolute; 
+    right: 20px; 
+    bottom: 10px;
+    border-radius: 7px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: .7s;
+}
+
+.edit-button-holder,
+.add-new-active_holder{
+    bottom: 0;
+    right: 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 25vh;
+    min-height: 160px;
+    z-index: 3;
+}
+
+.edit-button-holder {
+    border-radius: 10px;
+}
+
+.edit-close-button,
+.add-new-close-button{
+    width: 25px; 
+    height: 25px; 
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    filter: invert(1);
+    transform: rotate(0deg);
+    transition: transform .72s ease-in-out, left .72s ease-out, bottom .72s ease-in-out;
+}
+
+.edit-button-holder img,
+.add-new-active_holder img{
+    transform: rotate(405deg);
+    left: 45%;
+    bottom: 40%;
+    filter: invert(1);
+}
+
+
+
+
+#timerVsClock{
+    display: none;
+}
+
+
+/*New note form*/
+
+.new-note__form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    left: 20px;
+    transition: .9s;
+}
+.add-new-active_holder .new-note__form{
+    width: 60%;
+    height: 95%;
+}
+.new-note__text{
+    width: 98%;
+    height: 15%;
+}
+.new-note__money-form-holder input, .new-note__options-vs-time input, .new-note__options-vs-time select, #new-note__text{
+    width: 47%;
+    min-height: 20px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: cornflowerblue 0 0 0 0;
+    transition: all .45s ease-in-out;
+    font-size: 15px;
+    padding: 0px;
+}
+
+.new-note__money-form-holder input:focus, #new-note__text:focus{
+    box-shadow: cornflowerblue 1px 3px 4px 0px;
+}
+
+
+.add-new-active_holder input, .add-new-active_holder .new-note__options-vs-time input, .add-new-active_holder .new-note__options-vs-time select,.add-new-active_holder #new-note__text {
+    padding: 2px 0;
+}
+
+#new-note__text{
+    width: 100%;
+    height: 15%;
+}
+
+.new-note__submit{
+    visibility: hidden;
+    position: absolute;
+    bottom: 14px;
+    left: 105%;
+    width: 70%;
+    max-width: fit-content;
+    height: 14%;
+    transition-delay: .9s;
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+}
+
+.add-new-active_holder .new-note__submit{
+    visibility: visible;
+    opacity: 1;
+    padding: 3px;
+}
+
+.new-note__money-form-holder{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.new-note__options-vs-time{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.new-note__time-form-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moneyCounter{
+    display: none;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 72vw;
+}
+
+.moneyCounter div{
+    position: absolute;
+    left: 40vw;
+    top: 0;
+}
+.month-total{
+    text-align: center;
+}

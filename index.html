@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="style/colors.css">
+    <link rel="stylesheet" href="style/customAlert.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/calendar.css">
+    <link rel="stylesheet" href="style/toolBar.css">
+    <link rel="stylesheet" href="style/landscape.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+		<menu>
+			<div class="menu-ramp"></div>
+			<div class="menu-ramp"></div>
+			<div class="menu-ramp"></div>
+		</menu>
+		<div class="surch-block">
+			<input type="text" class="surch-input">
+			<img src="media/image/ionIcons/search-outline.svg" alt="" class="surch">
+		</div>
+		<div class="Account"></div>
+	</header>
+    <main>
+        <div class="calendar">
+			<div class="calendar-inside-whidth">
+			<div class="calendar-days">
+				<div class="month">      
+  					<ul>
+    					<li class="prev">❮</li>
+    					<li class="next">❯</li>
+    					<li class="year"><br><span data=""></span></li>
+					</ul>
+				</div>
+				<ul class="weekdays">
+					<li>Пн.</li>
+					<li>Вт.</li>
+					<li>Ср.</li>
+					<li>Чт.</li>
+					<li>Пт.</li>
+					<li>Сб.</li>
+					<li>Вс.</li>
+				</ul>
+				<ul class="days"> 
+					<li value="1" class="deycolum deycolum-1">
+						<span class="" id="2022.7.1"></span>
+						<span class="" id="2022.10.1"></span>
+						<span class="" id="2022.10.2"></span>
+						<span class="chained" id="2022.11.1">1</span>
+						<span class="chained" id="2022.11.2">2</span>
+						<span class="chained" id="2022.11.3">3</span>
+						<span class="chained" id="2022.11.4">4</span>
+					</li>
+					<li value="2" class="deycolum deycolum-2">
+						<span class="chained" id="2022.11.5">5</span>
+						<span class="chained" id="2022.11.6">6</span>
+						<span class="chained" id="2022.11.7">7</span>
+						<span class="chained" id="2022.11.8">8</span>
+						<span class="chained" id="2022.11.9">9</span>
+						<span class="chained" id="2022.11.10">10</span>
+						<span class="chained" id="2022.11.11">11</span>
+					</li>
+					<li value="3" class="deycolum deycolum-3">
+						<span class="chained" id="2022.11.12">12</span>
+						<span class="chained" id="2022.11.13">13</span>
+						<span class="chained" id="2022.11.14">14</span>
+						<span class="chained" id="2022.11.15">15</span>
+						<span class="chained" id="2022.11.16">16</span>
+						<span class="chained" id="2022.11.17">17</span>
+						<span class="chained" id="2022.11.18">18</span>
+					</li>
+					<li value="4" class="deycolum deycolum-4">
+						<span class="chained" id="2022.11.19">19</span>
+						<span class="chained" id="2022.11.20">20</span>
+						<span class="chained" id="2022.11.21">21</span>
+						<span class="chained" id="2022.11.22">22</span>
+						<span class="chained" id="2022.11.23">23</span>
+						<span class="chained" id="2022.11.24">24</span>
+						<span class="chained" id="2022.11.25">25</span>
+					</li>
+					<li value="5" class="deycolum deycolum-5">
+						<span class="chained" id="2022.11.26">26</span>
+						<span class="chained" id="2022.11.27">27</span>
+						<span class="chained" id="2022.11.28">28</span>
+						<span class="chained" id="2022.11.29">29</span>
+						<span class="chained active" id="2022.11.30">30</span>
+						<span class="chained" id="2022.11.31">31</span>
+						<span class="" id="2023.0.29"></span>
+					</li>
+					<li value="6" class="deycolum deycolum-6">
+						<span class="" id="2023.0.30"></span>
+						<span class="" id="2023.0.31"></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</li>
+				</ul>
+				<div class="calendar-hide-holder">
+					<button class="calendar-hider"><span>❯</span></button>
+				</div>
+			</div>
+			<div class="calendar-times">
+				<div class="edit-mode">
+					<img class="delete-button" src="media/image/ionIcons/trash-outline.svg" alt="Delete">
+					<img src="media/image/ionIcons/arrow-undo-outline.svg" id="undo-delete" alt="Undo Delete">
+					<button class="delete">Удалить</button>
+					<img class="edit-button" src="media/image/ionIcons/pencil-outline.svg" alt="Edit">
+				</div>
+				<div class="calendar-clock">
+					<div class="calendar-time-inside">
+						<p id="timerVsClock">
+                            <span class="clock-houres-s-minutes">16:00</span>
+							<span class="clock-seconds">50c</span>
+						</p>
+						<div class="day-info-text">
+						</div>
+					</div>
+					<div></div>
+				</div>
+			</div>
+		
+			</div>
+		</div>
+    </main>
+	<aside>
+		<div class="aside-holder">
+			<div class="moneyCounter">
+				<span>Сегодня</span>
+				<p>Получено: <span class="money earned"></span></p>
+				<p>Затрачено: <span class="money spent"></span></p>
+				<p>Заработок: <span class="money total"></span></p>
+				<div><p>За этот месяц: <p class="money month-total"></p></p></div>
+			</div>
+		</div>
+	</aside>
+    <footer>
+		<p class="mail" style="display: none;"><span class="mail-span">©<a href="mailto:gameweighteight@gmail.com" class="c-gweight-ref">GWEight</a> .<span class="f-year"></span></span></p>
+		<div class="add-new-button-holder">
+			<form class="new-note__form">
+				<div class="new-note__options-vs-time">
+					<select id="category-select" name="category">
+						<option value="Занято">Занято</option>
+						<option value="Cвободно">Cвободно</option>
+						<option value="Другое">Другое</option>
+					  </select>
+				  
+					
+					  <input id="new-note__time" class="new-note__input new-note__input--time" type="time">
+				</div>
+			  
+				<input id="new-note__text" type="text" class="new-note__input new-note__input--text" placeholder="Заметка">
+
+				<div class="new-note__money-form-holder">
+					<input id="new-note__income" class="new-note__input new-note__input--income" type="number" placeholder="Заработок">
+					<input id="new-note__expenses" class="new-note__input new-note__input--expenses" type="number" placeholder="Затраты">
+				</div>
+			  
+				<input class="new-note__submit" type="submit" value="Создать заметку">
+			  </form>
+			<img src="media/image/ionIcons/add-outline.svg" alt="Add New" class="add-new-close-button">
+		</div>
+	</footer>
+	
+	<div class="edit-button-overlay">
+		<div class="edit-button-holder">
+			<form class="edit-note__form">
+				<div class="edit-note__options-vs-time">
+					<select id="edit-category-select" name="category">
+						<option value="Занято">Занято</option>
+						<option value="Cвободно">Cвободно</option>
+						<option value="Другое">Другое</option>
+					</select>
+				
+					
+					<input id="edit-note__time" class="edit-note__input edit-note__input--time" type="time">
+				</div>
+			
+				<input id="edit-note__text" type="text" class="edit-note__input edit-note__input--text" placeholder="Заметка">
+
+				<div class="edit-note__money-form-holder">
+					<input id="edit-note__income" class="edit-note__input edit-note__input--income" type="number" placeholder="Заработок">
+					<input id="edit-note__expenses" class="edit-note__input edit-note__input--expenses" type="number" placeholder="Затраты">
+				</div>
+			
+				<button class="edit-note__submit" type="submit">Сохранить</button>
+			</form>
+			<img src="media/image/ionIcons/add-outline.svg" alt="Edit" class="edit-new-close-button">
+		</div>
+	</div>
+
+    <script src="script/main.js"></script>
+    <script src="script/customAlert.js"></script>
+    <script src="script/oldDates.js"></script>
+    <script src="script/moneyCounterFunc.js"></script>
+    <script src="script/calendar.js"></script>
+    <script src="script/calendarFunctions.js"></script>
+    <script src="script/mainMenu.js"></script>
+    <script src="script/toolBar.js"></script>
+
+
+	<!-- Libs -->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

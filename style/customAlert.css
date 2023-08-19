@@ -1,0 +1,36 @@
+.custom-alert {
+    transition: .7s;
+    position: fixed;
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #e1dbdb;
+    border-radius: 5px;
+    box-shadow: 0 0 22px rgb(0 0 0 / 39%);
+    padding: 14px;
+    text-align: center;
+    z-index: 999;
+  }
+  
+  .custom-alert.show{
+    left: 50%;
+  }
+
+  .custom-alert-message {
+    margin-bottom: 20px;
+  }
+  
+  .custom-alert-close {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .custom-alert-close:hover {
+    background-color: #d32f2f;
+  }

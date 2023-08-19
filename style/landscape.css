@@ -1,0 +1,83 @@
+@media screen and (orientation: landscape) { 
+    main {
+        min-height: 295px;
+        height: var(--main-height);
+    }
+
+    .calendar-inside-whidth{
+        align-items: flex-start;
+    }
+
+    .calendar-days {
+        width: 56vw;
+    }
+
+    header {
+        height: 15%;
+    }
+
+    .calendar {
+        top: 0 !important;
+    }
+
+    .calendar-clock {
+        height: var(--calendarClock-maxHeight) !important;
+        max-height: var(--calendarClock-maxHeight) !important;
+        background: var(--content-holder-color);
+    }
+
+    .calendar-times {
+        width: 44vw;
+    }
+    
+    .month {
+        height: 15%;
+    }
+
+    .days {
+        height: 45%;
+    }
+
+    .day-info-text {
+        width: 96%;
+        background: var(--content-holder-color);
+    }
+
+    .calendar-inside-whidth {
+        flex-direction: row;
+    }
+
+    .edit-mode {
+        margin: 15px 0 5px;
+    }
+
+    .day-info-text {
+        text-align: center;
+    }
+
+    .calendar-hider {
+        display: none;
+    }
+
+    .calendar-time-inside {
+        top: 2%;
+    }
+
+    .add-new-active_holder {
+        height: 50vh;
+        width: 55vw;
+    }
+
+    .add-new-button-holder, 
+    .edit-button-holder {
+        background: var(--content-color2);
+    }
+
+    #undo-delete {
+        margin: 0px;
+    }
+
+    .edit-note__submit, input[type=submit] {
+        background: #797fa1;
+    }
+}
